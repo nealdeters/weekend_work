@@ -5,6 +5,7 @@ def find_longest_word(sentence)
   words = sentence.split(" ")
   words.each do |word|
     longest_word = word unless word.length < longest_word.length
+    #puts longest_word
   end
   longest_word
 end
