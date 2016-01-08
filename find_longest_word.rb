@@ -1,7 +1,12 @@
 # Complete the method called find_longest_word, which will accept a string as a parameter (usually a sentence), and return another string that will be the longest word in that sentence.
 
 def find_longest_word(sentence)
-
+  longest_word = ""
+  words = sentence.split(" ")
+  words.each do |word|
+    longest_word = word unless word.length < longest_word.length
+  end
+  longest_word
 end
 
 # Driver code - don't touch anything below this line.
