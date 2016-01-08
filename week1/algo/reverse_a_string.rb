@@ -1,6 +1,6 @@
 # Complete the method called reverse_a_string that accepts a string as a parameter and 
 # returns the reverse. The one caveat: Don't use the reverse method that already
-# comes with Ruby!
+# comes with Ruby
 
 def reverse_a_string(string)
   string_length = string.length
