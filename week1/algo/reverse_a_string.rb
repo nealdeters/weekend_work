@@ -2,18 +2,30 @@
 # returns the reverse. The one caveat: Don't use the reverse method that already
 # comes with Ruby
 
+# def reverse_a_string(string)
+#   string_length = string.length
+
+#   word = ''
+
+#   while string_length > 0 
+#     string_length -= 1
+#     word += string[string_length]
+#   end
+
+#   word
+
+# end
+
 def reverse_a_string(string)
-  string_length = string.length
+  array = string.split("")
 
-  word = ''
+  reverse_string = ""
 
-  while string_length > 0 
-    string_length -= 1
-    word += string[string_length]
+  array.each do |character|
+    reverse_string = character + reverse_string
   end
 
-  word
-
+  reverse_string
 end
 
 # Driver code - don't touch anything below this line.
