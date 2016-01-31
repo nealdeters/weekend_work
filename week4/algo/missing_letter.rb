@@ -7,17 +7,29 @@
 # if next char not in order then append to result array
 
 def find_missing_letter(range)
-  result = []
-  prev_char = ""
-  array = range.split("")
+  # result = []
+  # prev_char = ""
+  # array = range.split("")
 
-  array.each do |char|
-    if prev_char.next != char
-      result << prev_char.next
-    end
-    prev_char = char
+  # array.each do |char|
+  #   if prev_char.next != char
+  #     result << prev_char.next
+  #   end
+  #   prev_char = char
+  # end
+  # result
+
+  first_letter = range[0]
+  last_letter = range[-1]
+
+  test_range = (first_letter..last_letter).to_a
+  result = ""
+
+  test_range.each do |letter|
+    result += letter unless range.include?(letter)
   end
-  result
+  
+  result != "" ? result : nil 
 end
 
 # Driver code - don't touch anything below this line.
